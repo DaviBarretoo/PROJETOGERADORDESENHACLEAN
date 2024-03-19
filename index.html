@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/darkmode.css">
+</head>
+<body>
+  
+    
+    <div class="container">
+        <button id="toggle-mode">
+            <span class="sr-only"> Ativa Light Mode</span>
+              <i class="ph-bold ph-sun"></i>
+                  <i class="ph-bold ph-moon"></i>
+          </button>
+        <img src="./assets/img/img.png" alt="Cadeado">
+<div class="senha-gerada" id="texto"> <p>Selecione as Opções </p> </div>
+<button onclick="copiar()" class="copiartext" >Copiar senha <i class="ph ph-clipboard-text"></i></button>
+<div class="principal">
+<p> Quantidade de caracteres :  <input type="number" min="1" max="20"  class="qtd-caracteres"></p>
+<p> Adicionar Maiúsculas :      <input type="checkbox" class="chk-maiusculas"></p>
+<p> Adicionar Minúsculas :     <input type="checkbox" class="chk-minusculas"></p>
+<p> Adicionar Números:  <input type="checkbox" class="chk-numeros"></p>
+<p> Adicionar Simbolos especiais : <input type="checkbox" class="chk-simbolos"></p>
+<button class="gera-senha-principal" >
+    <span class="gera-senha-sombra"></span>
+    <span class="gera-senha-borda"></span>
+    <span class="gera-senha-front text">
+      Gerar Senha
+    </span>
+  </button>
+</div>
+    </div>
+  
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js"></script>
+   
+  <script>
+      function copiar(){
+        let texto = document.getElementById("texto").innerText;
+        navigator.clipboard.writeText(texto);
+        alert("Senha copiada com sucesso")
+      }
+      
+    </script> 
+</body>
+
+</html>

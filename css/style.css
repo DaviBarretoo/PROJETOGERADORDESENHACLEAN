@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Para fazer o calculo de forma exata*/
+}
+
+
+
+html{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: auto;
+    border-radius: 2rem;
+    gap: 1rem;
+    word-break: break-all;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px 20px rgba(54, 219, 248, 0.308); 
+    
+}
+
+.copiartext{
+  display: flex;
+  align-self: center;
+align-items: center;
+  font-size: 1rem;
+  height: 1rem;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+  box-shadow: 1px 1px 10px 10px rgba(125, 125, 126, 0.027);
+  background: transparent;
+  cursor: pointer;
+  
+}
+
+.copiartext:hover{
+ color: rgba(0, 255, 42, 0.911);
+  
+}
+
+html:not(.light) .copiartext {
+  color: rgb(255, 255, 255);
+}
+
+html:not(.light) .copiartext:hover{
+  color: rgba(0, 255, 42, 0.911);
+   
+ }
+
+.senha-gerada {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: rgba(5, 8, 187, 0.699);
+    font-size: 2rem;
+    background-color: #EBF0F2;
+    border-radius: 2rem;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.principal{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    align-items: center;
+    
+}
+
+.gera-senha-principal {
+  margin: 2rem;
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.gera-senha-sombra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.gera-senha-borda {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(244, 100%, 16%) 0%,
+    hsl(216, 86%, 77%) 8%,
+    hsl(219, 83%, 68%) 92%,
+    hsl(246, 100%, 59%) 100%
+  );
+}
+
+.gera-senha-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(251, 100%, 47%);
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.gera-senha-principal:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.gera-senha-principal:hover .gera-senha-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.gera-senha-principal:active .gera-senha-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+
+
+
+
+
+
+html.light .gera-senha{
+    color: rgb(0, 0, 0);
+}
+html:not(light) .gera-senha{
+    color: rgb(255, 255, 255);
+    
+}
+input[type="checkbox"] {
+appearance: none; /* Para navegadores que seguem o padrão */
+  width: 20px; 
+  height: 20px; 
+  border: 2px solid #333; 
+  border-radius: 10px; /* Borda arredondada */
+  outline: none; /* Remove o contorno ao focar */
+}
+
+input[type="checkbox"]:checked {
+  background-image: url('../assets/img/check-circle.svg') ;
+  background-position: center center;
+  background-color: rgba(30, 255, 0, 0.514); }
+
+/* Estilo para o checkbox quando o mouse passa por cima */
+input[type="checkbox"]:hover {
+  border-color: #108002; /* Cor da borda quando o mouse passa por cima */
+}
+
+
+
+
+
+
+
