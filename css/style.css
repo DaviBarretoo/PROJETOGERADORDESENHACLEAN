@@ -191,6 +191,11 @@ input[type="checkbox"]:hover {
   border-color: #108002; /* Cor da borda quando o mouse passa por cima */
 }
 
+.copyright{
+  display: flex;
+  align-self: center;
+  
+}
 
 
 
